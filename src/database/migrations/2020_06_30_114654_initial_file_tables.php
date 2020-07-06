@@ -17,13 +17,13 @@ class InitialFileTables extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('path');
-            $table->bigInteger('model_id')->index();
+            $table->unsignedBigInteger('model_id')->index();
             $table->string('model_type')->index();
             $table->string('type')->index()->nullable();
             $table->string('mime_type')->nullable();
-            $table->bigInteger('size')->nullable();
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('size')->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->timestamps();
         });
     }
