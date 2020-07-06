@@ -1,0 +1,18 @@
+{
+    "name": "ktcd/file",
+    "description": "File Package",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Irvan Maulana",
+            "email": "me@tukangremot.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ktcd\\File\\": "src/"
+        }
+    },
+    "require": {}
+}
