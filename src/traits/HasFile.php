@@ -44,11 +44,11 @@ trait HasFile
         $target = 'files/' . $target;
 
         $name = $requestFile->getClientOriginalName();
-		$extension = $requestFile->getClientOriginalExtension();
-		$size = $requestFile->getSize();
+        $extension = $requestFile->getClientOriginalExtension();
+        $size = $requestFile->getSize();
         $mimeType = $requestFile->getMimeType();
         $filename = join('_', [$type, Uuid::uuid4()->toString()]);
-        $path = $target . '/' . $filename . '.' . $extension; 
+        $path = $target . '/' . $filename . '.' . $extension;
 
         $requestFile->move($target, $filename . '.' . $extension);
 
