@@ -32,7 +32,7 @@ trait HasFile
 
     public function addFile($requestFile, $type = null, $target = null, $data = [])
     {
-        $this->files()->delete();
+        $this->files()->where('type', $type)->delete();
         $this->store($requestFile, $type, $target, $data);
     }
 
