@@ -41,8 +41,8 @@ class FileServiceProvider extends ServiceProvider
         //     __DIR__.'/config/svknd_feed.php' => config_path('svknd_feed.php'),
         // ], 'svknd-feed-config');
 
-        // $this->publishes([
-        //     __DIR__ . '/database/migrations/' => database_path('migrations'),
-        // ], 'svknd-feed-migrations');
+        $this->publishes([
+            __DIR__ . '/database/migrations/' => database_path('migrations'),
+        ], 'svknd-feed-migrations');
     }
 }
