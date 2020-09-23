@@ -29,6 +29,13 @@ trait HasFile
     {
         return $this->morphOne(FileModel::class, 'model');
     }
+    
+    public function addFiles($requestFiles, $type = null, $target = null)
+    {
+        foreach ($requestFiles as $requestFile) {
+            $this->store($requestFile, $type, $target);
+        }
+    }
 
     public function addFile($requestFile, $type = null, $target = null, $data = [])
     {
